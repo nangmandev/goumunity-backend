@@ -6,5 +6,5 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface UserService extends UserDetailsService {
-    User createUser(UserCreateDto userCreateDto, MultipartFile profileImage);
+    User saveUser(UserCreateDto userCreateDto, MultipartFile profileImage);
 }

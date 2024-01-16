@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public User createUser(UserCreateDto userCreateDto, MultipartFile profileImage) {
+    public User saveUser(UserCreateDto userCreateDto, MultipartFile profileImage) {
         Image image = imageHandler.parseFileInfo(profileImage);
         User user = User.from(userCreateDto, image.getStoredFilePath(), encoder.encode(userCreateDto.getPassword()));
         return userRepository.save(user);
