@@ -12,7 +12,7 @@ import java.util.Date;
 
 @Component
 public class SingleImageHandler {
-    public Image parseFileInfo(MultipartFile image) throws IOException {
+    public Image parseFileInfo(MultipartFile image) {
         if(image == null) return null;
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
@@ -58,7 +58,12 @@ public class SingleImageHandler {
                 .build();
 
         file = new File(absolutePath + path + "/" + new_file_name);
-        image.transferTo(file);
+
+        try {
+            image.transferTo(file);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
         return img;
     }
