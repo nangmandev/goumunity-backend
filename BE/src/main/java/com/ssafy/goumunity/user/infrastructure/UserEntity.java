@@ -83,12 +83,10 @@ public class UserEntity {
                 .userStatus(user.getUserStatus())
                 .lastPasswordModifiedDate(user.getLastPasswordModifiedDate())
                 .regionId(user.getRegionId())
-                .createdAt(user.getCreatedAt())
-                .updatedAt(user.getUpdatedAt())
                 .build();
     }
 
-    public User to(){
+    public User toModel(){
         return User.builder()
                 .id(this.id)
                 .email(this.email)
