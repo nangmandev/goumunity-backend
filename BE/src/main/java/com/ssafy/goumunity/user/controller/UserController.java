@@ -18,8 +18,8 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/join")
-    public ResponseEntity<UserResponse> createUser(@RequestPart UserCreateDto userCreateDto,
-                                                   @RequestPart MultipartFile profileImage){
+    public ResponseEntity<UserResponse> createUser(@RequestPart(value = "data") UserCreateDto userCreateDto,
+                                                   @RequestPart(value = "image", required = false) MultipartFile profileImage){
         User user = userService.createUser(userCreateDto, profileImage);
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(UserResponse.from(user));

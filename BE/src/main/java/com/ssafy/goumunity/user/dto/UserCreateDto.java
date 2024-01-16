@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.web.multipart.MultipartFile;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,6 +18,5 @@ public class UserCreateDto {
     private UserCategory userCategory;
     private Integer gender;
     private String nickname;
-    private MultipartFile imgSrc;
     private Integer regionId;
 }
