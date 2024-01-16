@@ -30,10 +30,10 @@ public class User {
     private Instant createdAt;
     private Instant updatedAt;
 
-    public static User from(UserCreateDto userCreateDto, String imgUrl){
+    public static User from(UserCreateDto userCreateDto, String imgUrl, String encodedPw){
         return User.builder()
                 .email(userCreateDto.getEmail())
-                .password(userCreateDto.getPassword())
+                .password(encodedPw)
                 .monthBudget(userCreateDto.getMonthBudget())
                 .age(userCreateDto.getAge())
                 .userCategory(userCreateDto.getUserCategory())
