@@ -35,7 +35,7 @@ public class UserResponse {
                 .nickname(user.getNickname())
                 .imgSrc(user.getImgSrc())
                 .registerDate(user.getRegisterDate())
-                .userStatus(UserStatus.NORMAL)
+                .userStatus(UserStatus.ACTIVE)
                 .lastPasswordModifiedDate(user.getLastPasswordModifiedDate())
                 .regionId(user.getRegionId())
                 .build();

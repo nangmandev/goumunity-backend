@@ -41,7 +41,7 @@ public class User {
                 .nickname(userCreateDto.getNickname())
                 .imgSrc(imgUrl)
                 .registerDate(Instant.now())
-                .userStatus(UserStatus.NORMAL)
+                .userStatus(UserStatus.ACTIVE)
                 .lastPasswordModifiedDate(Instant.now())
                 .regionId(userCreateDto.getRegionId())
                 .build();

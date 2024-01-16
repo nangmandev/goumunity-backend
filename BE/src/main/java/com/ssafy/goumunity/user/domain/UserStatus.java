@@ -1,5 +1,5 @@
 package com.ssafy.goumunity.user.domain;
 
 public enum UserStatus {
-    NORMAL, LOCKED, EXPIRED, PW_EXPIRED, DELETED
+    ACTIVE, LOCKED, EXPIRED, PW_EXPIRED, DELETED
 }
