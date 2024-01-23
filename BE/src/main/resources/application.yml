@@ -3,6 +3,7 @@ spring:
     import:
       - constants.yml
       - database.yml
+      - secret.yml
   jpa:
     properties:
       hibernate:
